@@ -1,6 +1,9 @@
 # FJBannerView
 
 **FJBannerView** is a simple ,light weight bannerView 
+
+![demo icon](http://7xljbp.com1.z0.glb.clouddn.com/FJBannerViewDemo.gif)
+
 ### Installation
 ***
 * Drag the FJBannerViewDemo/FJBannerView folder into your project.
