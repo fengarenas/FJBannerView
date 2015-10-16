@@ -56,6 +56,11 @@ typedef void (^ImageTaped)(NSUInteger index);
 @property (nonatomic, assign) NSTimeInterval scrollInterval;
 
 /**
+ *  default is UIViewContentModeScaleToFill
+ */
+@property (nonatomic, assign) UIViewContentMode contentMode;
+
+/**
  *  default is YES,set this property show or hidden the pageIndicator
  */
 @property (nonatomic, assign ,getter=isShowPageIndicator) BOOL showPageIndicator;

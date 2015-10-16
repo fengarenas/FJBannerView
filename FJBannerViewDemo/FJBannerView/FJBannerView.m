@@ -64,8 +64,11 @@ static CGFloat const kPageControllBottomMargin = 20.0f;
     
     [_mainScrollView setFrame:self.bounds];
     [_leftImageView setFrame:CGRectMake(0, 0, _mainScrollView.frame.size.width, _mainScrollView.frame.size.height)];
+    [_leftImageView setContentMode:_contentMode];
     [_centerImageView setFrame:CGRectMake(_mainScrollView.frame.size.width, 0, _mainScrollView.frame.size.width, _mainScrollView.frame.size.height)];
+    [_centerImageView setContentMode:_contentMode];
     [_rightImageView setFrame:CGRectMake(_mainScrollView.frame.size.width * 2, 0, _mainScrollView.frame.size.width, _mainScrollView.frame.size.height)];
+    [_rightImageView setContentMode:_contentMode];
     
     [_mainScrollView setContentSize:CGSizeMake(self.frame.size.width * kTotalImageViews, self.frame.size.height)];
     [_mainScrollView setContentOffset:CGPointMake(self.frame.size.width, 0.0f)];
@@ -114,18 +117,15 @@ static CGFloat const kPageControllBottomMargin = 20.0f;
     [self addSubview:_mainScrollView];
     
     _leftImageView = [[UIImageView alloc]init];
-    _leftImageView.contentMode = UIViewContentModeScaleAspectFit;
     [_mainScrollView addSubview:_leftImageView];
     
     _centerImageView = [[UIImageView alloc]init];
-    _centerImageView.contentMode = UIViewContentModeScaleAspectFit;
     [_centerImageView setUserInteractionEnabled:YES];
     UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(centerImageViewTaped:)];
     [_centerImageView addGestureRecognizer:tapGes];
     [_mainScrollView addSubview:_centerImageView];
     
     _rightImageView = [[UIImageView alloc]init];
-    _rightImageView.contentMode = UIViewContentModeScaleAspectFit;
     [_mainScrollView addSubview:_rightImageView];
     
     _pageControl = [[UIPageControl alloc]init];
@@ -272,6 +272,12 @@ static CGFloat const kPageControllBottomMargin = 20.0f;
         _autoScroll = NO;
     }
     [self setupTimer];
+}
+
+- (void)setContentMode:(UIViewContentMode)contentMode{
+    if (_contentMode ==contentMode) return;
+    _contentMode = contentMode;
+    [self setNeedsLayout];
 }
 
 - (void)setShowPageIndicator:(BOOL)showPageIndicator{
