@@ -30,6 +30,8 @@ typedef void (^ImageTaped)(NSUInteger index);
 
 - (void)FJBannerView:(FJBannerView *)bannerView tapedAtIndex:(NSUInteger)index;
 
+- (void)FJBannerView:(FJBannerView *)bannerView scrollToIndex:(NSUInteger)index;
+
 @end
 
 @interface FJBannerView : UIView

@@ -179,6 +179,11 @@ static CGFloat const kPageControllBottomMargin = 20.0f;
     }
     [_mainScrollView setContentOffset:CGPointMake(scrollView.frame.size.width, 0.0f) animated:NO];
     [_pageControl setCurrentPage:_currentImageIndex];
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(FJBannerView:scrollToIndex:)]) {
+        [_delegate FJBannerView:self scrollToIndex:_currentImageIndex];
+    }
+    
     [self loadData];
 }
 
