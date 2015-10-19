@@ -12,7 +12,7 @@
 ### Usage
 ***
 ```
-//load image from url
+    //load image from url
     
     FJImage *image1 = [FJImage imageUrl:@"http://d.lanrentuku.com/down/png/1107/google_plus/google-circles.png" placeHolder:@"defaultimg"];
     FJImage *image2 = [FJImage imageUrl:@"http://d.lanrentuku.com/down/png/1107/google_plus/google-plus.png" placeHolder:@"defaultimg"];
@@ -39,4 +39,4 @@
 ```
 
 ## Author
-**fengjun** E-mail:<fengarenas@126.com> blog:[DevFeng](http://devfeng.com/)
+**FengJun** e-mail:<fengarenas@126.com> Blog:[DevFeng](http://devfeng.com/)
