@@ -7,7 +7,7 @@
 ### Installation
 ***
 * Drag the FJBannerViewDemo/FJBannerView folder into your project.
-* you need install SDWebImage manually or use cocoapods execute "pod install"
+* You need install SDWebImage manually or use cocoapods execute "pod install"
 
 ### Usage
 ***
