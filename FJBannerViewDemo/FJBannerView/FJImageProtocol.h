@@ -1,4 +1,4 @@
-// Copyright (c) 2013 FJBannerView
+// Copyright (c) 2015 FJBannerView
 // Author fengjun
 // Blog:http://devfeng.com/
 // Url :https://github.com/fengarenas/FJBannerView
